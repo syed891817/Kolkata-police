@@ -1,0 +1,2584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kolkata Police Cyber Crime Branch</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header { text-align: center; padding: 20px; background: #0a2a55; color: #fff; } header img { height: 80px; margin-right: 15px; border-radius: 50px;} header h1 { font-size: 2.5rem; font-weight: bold; text-align: center; }
+.header-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h3{
+  margin-bottom:5px;
+  margin-top: 10px;
+}
+.stopDrop{
+  color: rgb(255, 0, 0);
+  font-size: 25px;
+}
+.hero {
+  display: flex;
+
+  width: 100%;
+
+}
+.hero-main-wrapper{
+    min-height: 80vh;
+ background: linear-gradient(135deg, #010e33 0%, #00166b 50%, #4A1E95 100%);
+  position: relative;
+}
+.hero-main-wrapper-header{
+text-align: center;
+width: 100%;
+padding-top: 50px;
+margin-bottom: 30px;
+}
+.hero-main-wrapper-header h4{
+font-size: 60px;
+color: #f59e0b;
+}
+/* Overlay optional */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.1);
+  z-index: 0;
+}
+
+
+.hero-middle,
+.hero-right {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-left{
+    position: relative;
+  z-index: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Set fixed column widths */
+.hero-left   { flex: 0 0 30%; }
+.hero-middle { flex: 0 0 40%; }
+.hero-right  { flex: 0 0 30%; }
+
+/* Commissioner card styling */
+.commissioner-card {
+background: rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  max-width: 90%;
+  color: #fff;
+  overflow-y: auto;
+}
+.commissioner-card img {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.commissioner-text {
+  flex: 1; /* 👈 Take all available space */
+  min-width: 0; /* 👈 Prevent overflow in narrow spaces */
+}
+
+.commissioner-card p {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+
+.commissioner-text {
+  flex: 1;                    /* 👈 text takes full remaining space */
+  min-width: 0;               /* 👈 avoid overflow issues */
+}
+.commissioner-card span{
+  color: #f59e0b;
+  padding-top: 10px;
+  font-size: 20px;
+}
+.commissioner-card p{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.commissioner-text h3 { margin-top:0; color:#fff; font-size:1.3rem; }
+
+/* Middle column text box */
+.hero-text {
+  padding: 30px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+}
+.hero-text h2{
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.hero-text h2 span { color: #f59e0b; }
+
+/* Buttons */
+.button-section-banner {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.btn {
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  transition: 0.3s;
+}
+.btn-report { background:#e53935; }
+.btn-report:hover { background:#c62828; }
+.btn-tips { border:2px solid #fff; }
+.btn-tips:hover { background:#1e88e5; border-color:#1e88e5; }
+
+/* Right column image (not full) */
+.hero-right img {
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.6;
+  border-radius: 10px;
+
+}
+
+/* Responsive for small screens */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .hero-left,
+  .hero-middle,
+  .hero-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .hero-right img {
+    max-width: 100%;
+    max-height: 50vh;
+    opacity: 1;
+  }
+}
+
+    .next-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+
+      /* Page Layout */
+.cybercrime-page {
+  display: flex;
+  justify-content: center; /* center the content */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  flex-wrap: wrap;
+}
+
+.cybercrime-left {
+  width: 100%; /* full width */
+  max-width: 1000px; /* optional: constrain width for better layout */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+
+    .cybercrime-card {
+      background: #eaf4ff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      transition: all 0.2s ease;
+      border: 1px solid #afd3ff;
+    }
+
+    .cybercrime-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .cybercrime-unit {
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #222;
+      margin-bottom: 6px;
+    }
+
+    .cybercrime-officer {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 12px;
+    }
+
+    .cybercrime-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1a4ec733;
+      color: #1a4ec7;
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .cybercrime-email:hover {
+      background: #d4e4ff;
+    }
+
+    .cybercrime-email-icon {
+      font-size: 14px;
+    }
+
+    .cybercrime-page-heding{
+        font-size: 35px;
+        text-align: center;
+              color: #1a4fc7;
+              margin-top: 50px;
+              margin-bottom: 20px;
+    }
+  
+
+    /* Responsive: stack on small screens */
+    @media (max-width: 768px) {
+      .cybercrime-page {
+        flex-direction: column;
+        align-items: center;
+      }
+      .cybercrime-left {
+        width: 100%;
+        grid-template-columns: 1fr; /* single column cards */
+      }
+      .cybercrime-right {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+   .cybertips-section {
+    padding: 60px 20px;
+    background-color: #f5f7fa;
+    text-align: center;
+
+  }
+.cyber-tips {
+  position: relative;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.cyber-tips-slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.cyber-tips-slide {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.cyber-tips-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  height: 400px;
+}
+
+/* Show 4 slides per row on desktop */
+@media (min-width: 768px) {
+  .cyber-tips-slide {
+    flex: 0 0 25%;
+  }
+}
+
+.cyber-tips-prev,
+.cyber-tips-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 5px 12px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.6;
+}
+
+.cyber-tips-prev:hover,
+.cyber-tips-next:hover {
+  opacity: 1;
+}
+
+.cyber-tips-prev {
+  left: 10px;
+}
+
+.cyber-tips-next {
+  right: 10px;
+}
+
+  .cybertips-header h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+
+  .cybertips-header p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+
+  .cybertips-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .cybertips-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+  }
+
+  .cybertips-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .cybertips-icon {
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 16px auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cybertips-card h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 8px;
+  }
+
+  .cybertips-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .cybertips-cards {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+  }
+
+ .awareness-gallery {
+  padding: 20px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.awareness-gallery h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.awareness-gallery p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+  padding: 0 340px;
+}
+.big-vertical {
+  grid-row: span 2;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* normal images */
+.gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+}
+
+/* last big vertical image */
+.big-vertical {
+  grid-row: span 2;   /* spans 2 rows */
+  height: 420px;      /* make it taller */
+  object-fit: cover;
+}
+
+.gallery-video {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-video video {
+  cursor: default;
+}
+
+/* Modal styles for image preview */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: 5% auto;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gallery-img,
+  .gallery-video video {
+    height: 200px;
+  }
+  .awareness-gallery p {
+  padding: 0 0px;
+}
+}
+.social-connect {
+  padding: 60px 20px;
+  background: #0a2a55; /* Dark blue background */
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+ 
+}
+
+.social-connect h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.social-connect p {
+  font-size: 1rem;
+  color: #d0d8e6;
+  margin-bottom: 40px;
+}
+
+/* Grid layout */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+}
+
+/* Card design */
+.social-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-5px);
+}
+
+.social-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.social-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.social-card p {
+  font-size: 0.9rem;
+  color: #cbd3e1;
+  margin-bottom: 16px;
+}
+
+/* Buttons */
+.social-btn {
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+/* Button colors */
+.social-btn.facebook {
+  background: #1877f2;
+}
+.social-btn.instagram {
+  background: #e1306c;
+}
+.social-btn.whatsapp {
+  background: #25d366;
+}
+.social-btn.twitter {
+  background: #14171a;
+}
+
+/* QR Code */
+.qr-small {
+  margin-top: 12px;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Address Text */
+.address {
+ padding: 10px;
+  color: #000;
+  font-size: 1.5rem;
+    background: #f9fafc;
+  text-align: center;
+}
+
+/* WhatsApp Icon Circle */
+.wa-circle {
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #25D366 0%, #128C7E 100%);
+  box-shadow: 0 6px 18px rgba(18, 140, 126, 0.25);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.wa-circle:hover {
+  transform: translateY(-3px);
+}
+
+/* === Responsive tweaks === */
+@media (max-width: 768px) {
+  .social-connect h2 {
+    font-size: 1.6rem;
+  }
+
+  .social-connect p {
+    font-size: 0.95rem;
+  }
+
+  .qr-small {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-connect {
+    padding: 40px 16px;
+  }
+
+  .social-connect h2 {
+    font-size: 1.4rem;
+  }
+
+  .social-grid {
+     grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .social-card {
+    padding: 16px;
+  }
+
+  .qr-small {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Section Wrapper */
+.cyber-contact-section {
+  padding: 30px 20px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #f4f7fb 0%, #e9f1fb 100%);
+  color: #222;
+}
+
+/* Responsive Table Wrapper */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+  background: rgba(240, 248, 255, 0.6); /* light blue tint */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+}
+
+/* Modern Table */
+.cyber-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+/* Table Header */
+.cyber-table thead th {
+  background: rgba(10, 42, 85, 0.9);
+  color: #fff;
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: none;
+}
+
+/* Table Body Cells */
+.cyber-table tbody td {
+  padding: 5px 12px;
+  border-top: 1px solid rgba(10, 42, 85, 0.1);
+  vertical-align: center;
+}
+.cyber-table tbody{
+  background-color: #b7dcff;
+}
+/* Row Hover */
+.cyber-table tbody tr {
+  transition: background 0.25s ease;
+  border: none;
+}
+.cyber-table tbody tr:hover {
+  background: #0348a3c0; /* light blue hover */
+  color: #fff !important;
+}
+ .cyber-table tbody tr:hover .cyber-table td strong{
+  background: #0348a3a2; /* light blue hover */
+  color: #fff !important;
+}
+.cyber-table tr,
+.cyber-table td,
+.cyber-table th {
+  border-right: none !important;
+}
+/* Links inside table */
+.cyber-table td a {
+  color: #0a2a55;
+  text-decoration: none;
+  font-weight: 500;
+}
+.cyber-table td a:hover {
+  text-decoration: underline;
+}
+
+/* Icons inside table cells */
+.cyber-table td strong {
+  color: #0a2a55;
+  font-weight: 600;
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+  .cyber-table thead th,
+  .cyber-table tbody td {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+}
+.cyber-contact-section-top-sub {
+  padding: 30px 20px;
+  margin-top: 0px;
+  text-align: center;
+  background: linear-gradient(90deg, #0a2a55 0%, #1a3c7d 100%);
+  border-radius: 12px;
+  color: #fff;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.cyber-contact-section-top{
+    padding: 30px 20px;
+  margin-top: 0px;
+  text-align: center;
+    max-width: 900px;
+      margin-left: auto;
+  margin-right: auto;
+}
+.cyber-contact-section-top a{
+text-decoration: none;
+}
+.cyber-contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cyber-contact-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.cyber-contact-icon svg {
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+}
+
+.cyber-contact-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.cyber-contact-text p {
+  font-size: 1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .cyber-contact-header {
+    flex-direction: row;
+    text-align: left;
+    gap: 24px;
+    justify-content: center;
+  }
+  .cyber-contact-text h2 {
+    font-size: 2.2rem;
+  }
+}
+
+
+.highlight-box {
+  background: #fff3cd;        /* soft yellow highlight */
+  border: 2px solid #ff9800;  /* orange border for attention */
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin-top: 10px;
+}
+.blink {
+  animation: blink 1s infinite;
+  font-size: 20px;
+  font-weight: 700;
+}
+@keyframes blink {
+  0%, 100% { color: red; }
+  50% { color: #ff9800; }
+}
+.cybercrime-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cybercrime-card {
+  background-color: #f3f7ff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.cybercrime-unit {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #003366;
+  margin-bottom: 6px;
+}
+
+.cybercrime-officer {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.cybercrime-email {
+  color: #0044cc;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.cybercrime-email-icon {
+  margin-right: 6px;
+}
+.Website{
+  font-weight: 700;
+  font-size: 18px;
+}
+.email-main{
+    font-weight: 700;
+  font-size: 18px;
+}
+.button-section-banner{
+  display: flex;
+  gap: 10px;
+}
+.btn-cyber-safety {
+  display: inline-block;
+  background-color: #ffa600; /* Bootstrap blue */
+  color: white;
+  padding: 14px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+}
+
+.btn-cyber-safety:hover {
+  background-color: #ca8300;
+border:1px solid #ffb74b;
+}
+/*  */
+  /* ===== Safe Online Section Styles ===== */
+    .safe-online-section {
+      background: #f9fafc;
+      padding: 60px 20px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .safe-online-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .safe-online-section p.subtitle {
+      font-size: 1rem;
+      color: #6b7280;
+      margin-bottom: 40px;
+    }
+
+    .safe-online-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .safe-online-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .safe-online-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .safe-online-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: white;
+    }
+
+    .icon-red { background: #fee2e2; color: #dc2626; }
+    .icon-orange { background: #ffedd5; color: #ea580c; }
+    .icon-blue { background: #dbeafe; color: #2563eb; }
+    .icon-green { background: #d1fae5; color: #059669; }
+
+    .safe-online-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .safe-online-card p {
+      font-size: 0.95rem;
+      color: #4b5563;
+      line-height: 1.4;
+    }
+/* for popup */
+
+/* Modal styles */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 9999; 
+  left: 0; top: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+/* scrollable modal content */
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;   /* limit height */
+  overflow-y: auto;   /* vertical scroll if content is extra */
+  animation: fadeIn 0.3s ease-in-out;
+}
+.modal-content img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.modal-content h3 {
+  margin: 16px;
+  font-size: 20px;
+}
+
+.modal-content p {
+  margin: 0 16px 16px;
+  line-height: 1.5;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+/* gallery */
+.police-gallery {
+    max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Top row → 2 images */
+.top-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Bottom row → 3 images */
+.bottom-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Thumbnails */
+.police-gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+.police-gallery img:hover {
+  transform: scale(1.03);
+}
+.police-gallery-section h2{
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+.police-gallery-section{
+  margin-top: 40px;
+      margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+/* ===== Lightbox overlay ===== */
+.lb-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.9);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+.lb-overlay:target {
+  display: flex;
+  flex-direction: column;
+}
+.lb-overlay img {
+  max-width: 92%;
+  max-height: 80vh;
+  border-radius: 6px;
+  margin: auto;
+}
+.lb-caption {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #eee;
+}
+.lb-overlay::before {
+  content: "Click anywhere to close";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #fff;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .top-row, .bottom-row {
+    grid-template-columns: 1fr; /* stack images on small screens */
+  }
+  .commissioner-card
+ {
+    max-width: 100%;
+}
+.header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.hero {
+    flex-direction: column;
+    padding: 10px;
+}
+.commissioner-card p {
+font-size: 13px;
+}
+.hero-text h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.commissioner-card img {
+    width: 250px;
+    height: 230px;
+    border-radius: 8px;
+    object-fit: content;
+    margin-bottom: 10px;
+}
+.commissioner-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+}
+
+
+.gallery-slider {
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.slider-title {
+  margin-bottom: 20px;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  min-width: 33.33%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev { left: 0px; }
+.next { right: 0px; }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .slide { min-width: 50%; }
+}
+
+@media (max-width: 600px) {
+  .slide { min-width: 100%; }
+}
+
+/* Modal */
+.slider-image-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-image-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.slider-image-close {
+  position: absolute;
+  top: 20px; right: 30px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.slidermodal {
+  display: none; 
+  position: fixed; 
+  z-index: 10000; 
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.9); 
+  justify-content: center; 
+  align-items: center;
+}
+
+.slidermodal-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.sliderclose {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* baneer */
+.image-banner {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.image-banner img {
+  width: 100%;
+  height: auto;   /* keeps aspect ratio */
+  display: block;
+  object-fit: cover;
+}
+
+.police-g-wrapper h2{
+  text-align: center;
+  font-size: 35px;
+  margin-top: 50px;
+}
+.police-g-wrapper {
+  margin-bottom: 40px;
+}
+
+.main-promo-banner-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;      /* same spacing as old banner */
+}
+
+.main-promo-banner-slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.main-promo-banner-slide {
+  flex: 0 0 100%;
+}
+
+.main-promo-banner-slide img {
+  width: 100%;
+  height: auto;             /* keep aspect ratio */
+  display: block;
+  object-fit: cover;        /* crop if the ratio differs */
+}
+
+.main-promo-banner-prev,
+.main-promo-banner-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.main-promo-banner-prev { left: 15px; }
+.main-promo-banner-next { right: 15px; }
+
+.main-promo-banner-prev:hover,
+.main-promo-banner-next:hover {
+  background: rgba(0,0,0,0.8);
+}
+/*  */
+/* --- Base --- */
+.cyber-cta {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+
+.cyber-cta .cta-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e8e8e8;
+  margin-bottom: 1.5rem;
+}
+.cta-intro{
+  color: #021e42 !important;
+  font-size: 25px !important;
+}
+.cyber-cta p{
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+.highlight{
+  padding: 15px 15px !important;
+    color: #021e42;
+    font-size: 28px !important;
+    border-radius: 30px !important;
+    font-weight: 600;
+}
+.cyber-cta .highlight {
+  background: #f5c518;
+  color: #0a2a55;
+  padding: 0 6px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* --- Award box --- */
+.cta-award {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+    background: #ffc40025;
+    border: 2px solid #ff9800;
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+  margin: 1.5rem auto;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.cta-award h2 {
+  margin: 0 0 0.3rem;
+  color: #ffae00;
+  font-size: 1.5rem;
+}
+
+.cta-award p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #000000;
+  font-weight: 600;
+}
+
+.award-icon {
+  font-size: 2.5rem;
+}
+
+/* --- Buttons --- */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+  background: #f5c518;
+  color: #0a2a55;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #0a2a55;
+  border: 1px solid #0a2a55 ;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.sub-pra-cyber-intro{
+  padding: 0 120px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .cta-intro { font-size: 1rem; }
+  .cta-award { flex-direction: column; text-align: center; }
+  .sub-pra-cyber-intro{
+  padding: 0 0px;
+}
+.highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:20px !important;
+}
+.hero-main-wrapper-header h4 {
+    font-size: 30px;
+    color: #f59e0b;
+}
+.hero-main-wrapper-header {
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.cybertips-header p{
+  margin-bottom: 10px;
+}
+.cyber-cta {
+  
+    padding: 1rem 1rem;
+
+}
+.safe-online-section {
+    background: #f9fafc;
+    padding: 20px 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+}
+
+.thankyou-section {
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .thankyou-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .thankyou-section p.subtitle {
+      font-size: 1rem;
+      color: #4b5563;
+      margin-bottom: 40px;
+    }
+
+    .partners {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+  .partner-card {
+      position: relative;
+      border-radius: 16px;
+      padding: 2px; /* Space for gradient border */
+      background: linear-gradient(90deg, #3b82f6, #06b6d4); /* Gradient border */
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .partner-card-inner {
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      height: 100%;
+      text-align: center;
+    }
+
+
+    .partner-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .partner-card img {
+      max-width: 100px;
+      margin-bottom: 15px;
+    }
+
+    .icci{
+      max-width: 200px !important;
+    }
+    .federal{
+       max-width: 200px !important;
+    }
+    .partner-card h3 {
+      font-size: 1.2rem;
+      margin: 10px 0 6px;
+      color: #0d1b4c;
+    }
+
+    .partner-card p {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin: 0;
+    }
+
+    .thankyou-footer {
+      margin-top: 40px;
+    }
+
+    .footer-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, #f59e0b, #fbbf24);
+      color: #fff;
+      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      text-decoration: none;
+      box-shadow: 0 6px 14px rgba(245, 158, 11, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .footer-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(245, 158, 11, 0.5);
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+    <img src="img/logo.png" alt="Kolkata Police Logo">
+    <div class="">
+    <h1>Cyber Crime Branch</h1>
+     <h3>Detective Department , Kolkata Police</h3>
+   </div>
+    </div>
+   
+  </header>
+
+<!-- HERO SECTION -->
+<section class="hero-main-wrapper">
+  <div class="hero-main-wrapper-header">  <h4>Cyber Safe Puja - 2025</h4></div>
+  <div class="hero">
+  
+  <!-- Right 30% -->
+  <div class="hero-right">
+    <div class="image-card-image">
+    <img src="img/Cyber Durga.png" alt="Cyber Safety Graphic">
+    </div>
+  </div>
+  <!-- Middle 30% -->
+  <div class="hero-middle">
+    <div class="hero-text">
+      <svg width="60" height="78" viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.0595 0.348156C17.3376 0.161462 17.665 0.0617676 18 0.0617676C18.335 0.0617676 18.6624 0.161462 18.9405 0.348156L21.1027 1.80166C24.6221 4.16425 28.6705 5.62113 32.8883 6.04291C33.5865 6.11364 34.2337 6.44085 34.7046 6.96121C35.1755 7.48157 35.4366 8.1581 35.4375 8.85991V19.7499C35.4375 26.5089 31.0973 32.5479 27.0923 36.7239C24.6638 39.2431 21.9963 41.5203 19.1273 43.5234C19.0658 43.5684 19.0178 43.6014 18.9833 43.6224L18.945 43.6494L18.9337 43.6562L18.9293 43.6584H17.0685L17.055 43.6494L17.0167 43.6224L16.8705 43.5234L16.344 43.1567C13.6748 41.243 11.1857 39.0898 8.90775 36.7239C4.90275 32.5479 0.5625 26.5089 0.5625 19.7499V8.85991C0.5625 7.40416 1.665 6.18691 3.11175 6.04291C7.32954 5.62113 11.3779 4.16425 14.8973 1.80166L17.0595 0.348156ZM17.073 43.6607C17.3483 43.8416 17.6705 43.9381 18 43.9381C18.3295 43.9381 18.6517 43.8416 18.927 43.6607H17.073ZM16.3125 38.9042V4.90666C12.5799 7.31057 8.34701 8.82903 3.9375 9.34591V19.7499C3.9375 25.1409 7.47225 30.3519 11.3423 34.3884C12.8996 35.9989 14.5598 37.5066 16.3125 38.9019" fill="#F49F00"/>
+</svg>
+
+      <h2>Welcome to Cyber Crime Branch of <span>Kolkata Police</span></h2>
+      <p>Protect yourself from online fraud and scams during the festive season.
+         Report suspicious activities and stay informed.</p>
+
+  
+    </div>
+  </div>
+
+<!-- Left 40% -->
+  <div class="hero-left">
+    <div class="commissioner-card">
+      <img src="img/commissioner.jpg" alt="Commissioner of Police">
+      <div class="commissioner-text">
+        <h3>Respected citizens of Bengal,</h3>
+        <p>
+          <!-- full message text -->
+         As we welcome the joyous festival of Durga Puja, I extend my heartfelt wishes to you and your families. Along with celebration, let us remain vigilant against financial frauds that often rise during this season. To safeguard you, Kolkata Police will operate 18 Cyber Awareness Kiosks at major puja pandals across the city. At these kiosks, citizens will be informed about various modus operandi of cyber crimes, and awareness leaflets will be distributed. Our true motto is to ensure that every citizen enjoys this Puja as a Cyber Safe Puja. Stay alert, stay aware, and stay safe.
+        </p>
+        <span>— Commissioner of Police, Kolkata Police</span>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+<section class="cyber-contact-section-top">
+    <h6 class="stopDrop">#StopDropInform</h6>
+  <h2>Cyber Crime Contact Information – Kolkata Police</h2>
+<p class="highlight-box">
+  <strong>National Cyber Crime Reporting Portal</strong><br>
+  📞 <a href="tel:1930"><span class="blink">Help Line No: <strong>1930</strong></span></a> |
+  Website: <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer" class="Website">cybercrime.gov.in</a><br>
+
+  <a href="mailto:bankfraud@kolkatapolice.gov.in" class="email-main">cyberps@kolkatapolice.gov.in</a> |
+  📞 <a href="tel:8585063104"><strong>+91 98365 13000</strong></a>
+</p>
+</section>
+<!--  -->
+<section class="cybertips-section" id="cyber-safety-tips">
+  <div class="cybertips-header">
+    <h2>Cyber Safety Tips</h2>
+    <p>Essential guidelines to protect yourself online during festivities</p>
+  </div>
+
+<section class="cyber-tips">
+  <div class="cyber-tips-slider">
+    <div class="cyber-tips-slide">
+      <img src="img/tips-1.jpeg" alt="Cyber Tip 1">
+    </div>
+     <video controls class="gallery-img big-vertical cyber-tips-slide">
+        <source src="img/WhatsApp Video 2025-09-20 at 6.17.27 PM.mp4" type="video/mp4"  >
+        Your browser does not support the video tag.
+      </video>
+    <div class="cyber-tips-slide">
+       <img src="img/tips-2.jpeg" alt="Cyber Tip 2">
+    </div>
+        <video controls class="gallery-img big-vertical cyber-tips-slide">
+        <source src="img/WhatsApp Video 2025-09-20 at 6.17.13 PM.mp4" type="video/mp4"  >
+        Your browser does not support the video tag.
+      </video>
+        <div class="cyber-tips-slide">
+       <img src="img/tips-3.jpeg" alt="Cyber Tip 2">
+    </div>
+
+        <div class="cyber-tips-slide">
+       <img src="img/tips-4.jpeg" alt="Cyber Tip 2">
+    </div>
+
+        <div class="cyber-tips-slide">
+       <img src="img/tips-5.jpeg" alt="Cyber Tip 2">
+    </div>
+        <div class="cyber-tips-slide">
+       <img src="img/tips-6.jpeg" alt="Cyber Tip 2">
+    </div>
+        <div class="cyber-tips-slide">
+       <img src="img/tips-7.jpeg" alt="Cyber Tip 2">
+    </div>
+            <div class="cyber-tips-slide">
+       <img src="img/tips-8.jpeg" alt="Cyber Tip 2">
+    </div>
+
+            <div class="cyber-tips-slide">
+       <img src="img/tips-9 (1).jpeg" alt="Cyber Tip 2">
+    </div>
+
+            <div class="cyber-tips-slide">
+       <img src="img/tips-10.jpeg" alt="Cyber Tip 2">
+    </div>
+      
+     
+      
+       <video controls class="gallery-img big-vertical cyber-tips-slide">
+        <source src="img/WhatsApp Video 2025-09-14 at 19.40.35.mp4" type="video/mp4"  >
+        Your browser does not support the video tag.
+      </video>
+      <video controls class="gallery-img big-vertical cyber-tips-slide">
+        <source src="img/WhatsApp Video 2025-09-14 at 00.19.32.mp4" type="video/mp4"  >
+        Your browser does not support the video tag.
+      </video>
+        <video controls class="gallery-img big-vertical cyber-tips-slide">
+        <source src="img/WhatsApp Video 2025-09-10 at 20.14.20.mp4" type="video/mp4"  >
+        Your browser does not support the video tag.
+        </video>
+         <video controls class="gallery-img big-vertical cyber-tips-slide">
+        <source src="img/WhatsApp Video 2025-09-10 at 20.13.09.mp4" type="video/mp4"  >
+        Your browser does not support the video tag.
+        </video>
+        <video controls class="gallery-img big-vertical cyber-tips-slide">
+        <source src="img/WhatsApp Video 2025-09-09 at 19.23.53.mp4" type="video/mp4"  >
+        Your browser does not support the video tag.
+        </video>
+          <video controls class="gallery-img big-vertical cyber-tips-slide">
+        <source src="img/WhatsApp Video 2025-08-21 at 23.48.44.mp4" type="video/mp4"  >
+        Your browser does not support the video tag.
+        </video>
+
+    <!-- Add more slides as needed -->
+  </div>
+
+  <button class="cyber-tips-prev">❮</button>
+  <button class="cyber-tips-next">❯</button>
+</section>
+
+</section>
+
+<!--  -->
+<section class="cyber-cta">
+  <h3 class="cta-intro">
+    Display the <span class="highlight">CYBER SAFE PUJO – 2025</span> Banner
+  </h3>
+<p class="sub-pra-cyber-intro">All Puja Committees are requested to download the Bengali and English versions of the “Cyber Safe Durga Puja 2025” posters and display them prominently at their pandals for public awareness</p>
+  <div class="cta-award">
+    <span class="award-icon">🏆</span>
+    <div>
+      <h2>Best Awareness Initiative Award</h2>
+      <p>Committees that carry out this awareness effectively will be awarded by the Commissioner of Kolkata Police.</p>
+    </div>
+  </div>
+
+ <div class="cta-buttons">
+    <!-- English banner download -->
+    <a href="img/first-banner (1).pdf" download="Cyber-Safe-Pujo-2025-English.pdf" class="btn btn-primary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="btn-icon">
+        <path d="M.5 9.9v4.6c0 .3.2.5.5.5h14a.5.5 0 0 0 .5-.5V9.9a.5.5 0 0 0-1 0v4.1H1V9.9a.5.5 0 0 0-1 0z"/>
+        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+      </svg>
+      Download Banner – English Version
+    </a>
+
+    <!-- Bengali banner download -->
+    <a href="img/first-banner (2).pdf" download="Cyber-Safe-Pujo-2025-Bengali.pdf" class="btn btn-secondary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="btn-icon">
+        <path d="M.5 9.9v4.6c0 .3.2.5.5.5h14a.5.5 0 0 0 .5-.5V9.9a.5.5 0 0 0-1 0v4.1H1V9.9a.5.5 0 0 0-1 0z"/>
+        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+      </svg>
+      Download Banner – Bengali Version
+    </a>
+</section>
+
+<div class="main-promo-banner-slider">
+    <div class="main-promo-banner-slides">
+      <div class="main-promo-banner-slide">
+        <img src="img/first-banner (1).png" alt="Banner 1">
+      </div>
+      <div class="main-promo-banner-slide">
+        <img src="img/first-banner (2).png" alt="Banner 2">
+      </div>
+        <div class="main-promo-banner-slide">
+        <img src="img/first-banner (3).png" alt="Banner 2">
+      </div>
+        <div class="main-promo-banner-slide">
+        <img src="img/first-banner (4).png" alt="Banner 2">
+      </div>
+        <div class="main-promo-banner-slide">
+        <img src="img/first-banner (5).png" alt="Banner 2">
+      </div>
+        <div class="main-promo-banner-slide">
+        <img src="img/first-banner (6).png" alt="Banner 2">
+      </div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <button class="main-promo-banner-prev">&#10094;</button>
+    <button class="main-promo-banner-next">&#10095;</button>
+  </div>
+<!--  -->
+<section class="safe-online-section">
+    <h2>Stay Safe Online</h2>
+    <p class="subtitle">Protect yourself from common online scams and fraudulent activities with these essential safety tips.</p>
+
+    <div class="safe-online-cards">
+      <!-- Card 1 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-red">🔒</div>
+        <h3>No Digital Arrest</h3>
+      <p>
+        Don’t be afraid—there’s no such thing as a Digital Arrest. Never surrender to fake cops.
+      
+
+      </p>
+       <a href="#" class="know-more" 
+        data-title="No Digital Arrest" 
+        data-img="img/1.png" 
+        data-desc="Scammers often pose as police officers, cybercrime officials, or government agents and threaten people with a so-called “Digital Arrest.” They claim you are involved in illegal online activities like money laundering or cybercrime and demand money to avoid arrest. In reality, there is no legal concept of a “Digital Arrest.” Law enforcement authorities never ask for payments over calls or chats." 
+        data-desc2="প্রতারকরা প্রায়ই নিজেদেরকে পুলিশ অফিসার, সাইবার ক্রাইম অফিসার বা সরকারি প্রতিনিধি বলে পরিচয় দেয় এবং মানুষকে ভয় দেখায় যে তাদের বিরুদ্ধে “ডিজিটাল অ্যারেস্ট” হবে। তারা বলে আপনি নাকি মানি লন্ডারিং বা সাইবার অপরাধে জড়িত এবং গ্রেফতার এড়াতে টাকা দিতে হবে। আসলে “ডিজিটাল অ্যারেস্ট” বলে কোনো আইন নেই। প্রকৃত আইন শৃঙ্খলা বাহিনী কখনোই ফোন বা চ্যাটের মাধ্যমে টাকা চায় না।">
+        Know More
+      </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-orange">🔗</div>
+        <h3>Suspicious Links</h3>
+        <p>Avoid clicking suspicious or unknown links—it can lead to data theft.</p>
+         <a href="#" class="know-more" 
+        data-title="Suspicious Links" 
+        data-img="img/2.png" 
+        data-desc="This is a classic phishing scam. Scammers send links via email, SMS, or social media messages that appear to be from a legitimate company (like a bank, e-commerce site, or social media platform). These links lead to a fake website that looks identical to the real one. When you enter your login credentials, banking details, or other personal information, the scammers steal it. A key giveaway is a URL that is slightly different from the official one (e.g., amazn.com instead of amazon.com)." 
+        data-desc2="সন্দেহজনক লিঙ্ক: এটি একটি পরিচিত ফিশিং স্ক্যাম। প্রতারকরা ইমেল, এসএমএস বা সোশ্যাল মিডিয়ার মাধ্যমে এমন লিঙ্ক পাঠায় যা দেখতে কোনো প্রকৃত কোম্পানি (যেমন ব্যাংক, ই-কমার্স সাইট বা সোশ্যাল মিডিয়া প্ল্যাটফর্ম) থেকে এসেছে বলে মনে হয়। এই লিঙ্কগুলো একটি নকল ওয়েবসাইটে নিয়ে যায় যা আসল সাইটের মতোই দেখতে। আপনি যখন সেখানে আপনার লগইন তথ্য, ব্যাংকিং বিবরণ বা অন্যান্য ব্যক্তিগত তথ্য প্রবেশ করান, তখন প্রতারকরা তা চুরি করে নেয়। একটি প্রধান লক্ষণ হলো URL-টি আসল URL-এর থেকে সামান্য আলাদা হবে (যেমন: amazn.com এর বদলে amazon.com)।">
+        Know More
+      </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-blue">💰</div>
+        <h3>Investment Scams</h3>
+        <p>Beware of fake investment schemes on social media promising high returns.</p>
+         <a href="#" class="know-more" 
+        data-title="Investment Scams" 
+        data-img="img/3.png" 
+        data-desc="These schemes often start with a message on social media, a dating app, or a messaging service. The scammer builds trust and then introduces a lucrative investment opportunity, often in cryptocurrency, forex, or stocks, promising guaranteed high returns with little to no risk. They may even show you fake account statements and profits to make the scheme seem real. Once you invest a significant amount, they disappear, and you lose all your money." 
+        data-desc2="এই ধরনের স্কিমগুলো প্রায়শই সোশ্যাল মিডিয়া, ডেটিং অ্যাপ বা মেসেজিং সার্ভিসের মাধ্যমে শুরু হয়। প্রতারক আপনার সাথে বিশ্বাস স্থাপন করে এবং তারপর একটি লাভজনক বিনিয়োগের সুযোগের কথা বলে, যা সাধারণত ক্রিপ্টোকারেন্সি, ফরেক্স বা শেয়ার মার্কেটে হয়। তারা কম ঝুঁকি নিয়ে অনেক বেশি লাভ দেওয়ার প্রতিশ্রুতি দেয়। স্কিমটি বাস্তবসম্মত দেখানোর জন্য তারা আপনাকে ভুয়া অ্যাকাউন্ট স্টেটমেন্ট এবং লাভও দেখাতে পারে। আপনি একটি বড় অঙ্কের টাকা বিনিয়োগ করার পর, তারা উধাও হয়ে যায় এবং আপনি আপনার সমস্ত টাকা হারান।">
+        Know More
+      </a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-green">🏨</div>
+        <h3>Hotel Booking Scams</h3>
+        <p>Fake websites trick users with advance payments, leading to financial loss.</p>
+         <a href="#" class="know-more" 
+        data-title="Hotel Booking Scams" 
+        data-img="img/4.png" 
+        data-desc="Fraudsters create fake hotel booking websites, apps, or advertisements that look genuine and offer heavy discounts to attract customers. Victims are asked to make advance payments for reservations. Later, they find out that the hotel doesn’t exist, the booking is invalid, or the contact details are fake. Such scams are common during holidays, festivals, and peak travel seasons. Always book hotels only from trusted travel portals, official hotel websites, or by calling the hotel directly to confirm your reservation." 
+        data-desc2="প্রতারকরা ভুয়া হোটেল বুকিং ওয়েবসাইট, অ্যাপ বা বিজ্ঞাপন তৈরি করে যা দেখতে আসল মনে হয় এবং আকর্ষণীয় ডিসকাউন্ট অফার করে। গ্রাহকদের অগ্রিম টাকা দিয়ে বুকিং করতে বলা হয়। পরে ভুক্তভোগীরা বুঝতে পারেন হোটেলটি আদৌ নেই, বুকিংটি জাল বা যোগাযোগের তথ্য ভুয়া। এই ধরনের প্রতারণা সাধারণত ছুটি, উৎসব বা ভ্রমণের মৌসুমে বেশি ঘটে। তাই হোটেল বুকিং করার সময় সর্বদা বিশ্বস্ত ট্রাভেল পোর্টাল, অফিসিয়াল হোটেল ওয়েবসাইট অথবা সরাসরি হোটেলে ফোন করে নিশ্চিত হয়ে নিন।">
+        Know More
+      </a>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-red">📞</div>
+        <h3>Fake Customer Care Numbers</h3>
+        <p>Fake customer care numbers lure customers with lucrative offers for their services to scam innocent civilians.</p>
+        <a href="#" class="know-more" 
+        data-title="Fake Customer Care Numbers" 
+        data-img="img/5.png" 
+        data-desc=" Scammers use SEO (Search Engine Optimization) to make their fake customer care numbers appear at the top of search results when you look up a company's helpline. When you call, the agent might claim that there's an issue with your account and ask you to download a remote access app or share your one-time password (OTP) or card details to fix it." 
+        data-desc2="ভুয়া কাস্টমার কেয়ার নম্বর: স্ক্যামাররা সার্চ ইঞ্জিন অপটিমাইজেশন (SEO) ব্যবহার করে তাদের ভুয়া কাস্টমার কেয়ার নম্বরগুলোকে সার্চ রেজাল্টের উপরের দিকে নিয়ে আসে। আপনি যখন কোনো কোম্পানির হেল্পলাইন খুঁজতে গিয়ে এই নম্বরে কল করেন, তখন এজেন্ট দাবি করে যে আপনার অ্যাকাউন্টে কোনো সমস্যা হয়েছে এবং তা ঠিক করার জন্য আপনাকে একটি রিমোট অ্যাক্সেস অ্যাপ ডাউনলোড করতে বা আপনার ওয়ান-টাইম পাসওয়ার্ড (OTP) বা কার্ডের বিস্তারিত তথ্য দিতে বলে।">
+        Know More
+      </a>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-orange">💻</div>
+        <h3>Remote Access Apps</h3>
+        <p>Beware! Third-party remote access apps give complete access of your device to the fraudster.</p>
+        <a href="#" class="know-more" 
+        data-title="Remote Access Apps" 
+        data-img="img/6.png" 
+        data-desc="Remote access apps allow someone else to control your device. Scammers trick victims into installing such apps by posing as customer support staff. Once installed, they can monitor your screen, access your files, and even make financial transactions. Never download remote access apps unless guided by official, trusted sources." 
+        data-desc2="রিমোট অ্যাক্সেস অ্যাপের মাধ্যমে অন্য কেউ আপনার ডিভাইস নিয়ন্ত্রণ করতে পারে। প্রতারকরা প্রায়ই কাস্টমার সাপোর্ট কর্মী সেজে ভুক্তভোগীদের এসব অ্যাপ ইন্সটল করতে বাধ্য করে। অ্যাপ ইন্সটল হলে তারা আপনার স্ক্রিন পর্যবেক্ষণ, ফাইল অ্যাক্সেস, এমনকি আর্থিক লেনদেনও করতে পারে। অফিসিয়াল ও বিশ্বস্ত সূত্র ছাড়া কখনোই এসব অ্যাপ ডাউনলোড করবেন না।">
+        Know More
+      </a>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-blue">⬇️</div>
+        <h3>Unknown APK Files</h3>
+        <p>Downloading APK files from unknown sources may lead to data breach of your device.</p>
+        <a href="#" class="know-more" 
+        data-title="Unknown APK Files" 
+        data-img="img/7.png" 
+        data-desc="Downloading APK files from unverified websites or links is risky. Such files may contain spyware, ransomware, or keyloggers that steal passwords, banking details, and personal data. Always download apps only from official app stores like Google Play Store or Apple App Store." 
+        data-desc2="অবিশ্বস্ত ওয়েবসাইট বা লিঙ্ক থেকে APK ফাইল ডাউনলোড করা খুবই বিপজ্জনক। এসব ফাইলে স্পাইওয়্যার, র‍্যানসমওয়্যার বা কী-লগার থাকতে পারে, যা আপনার পাসওয়ার্ড, ব্যাংক তথ্য এবং ব্যক্তিগত ডেটা চুরি করে। সর্বদা শুধুমাত্র অফিসিয়াল অ্যাপ স্টোর (Google Play Store বা Apple App Store) থেকে অ্যাপ ডাউনলোড করুন।">
+        Know More
+      </a>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-green">🆔</div>
+        <h3>Fake KYC Updates</h3>
+        <p>Stay alert! Fraudsters may send fake links or calls asking to update your online KYC.</p>
+        <a href="#" class="know-more" 
+        data-title="Fake KYC Updates" 
+        data-img="img/8.png" 
+        data-desc="Fraudsters pretend to be bank employees or service providers and send fake KYC update links or make phone calls. Victims are asked to share Aadhaar, PAN, OTP, or bank account details. These details are then misused for financial fraud. Always update KYC only through official bank branches or verified apps." 
+        data-desc2="প্রতারকরা ব্যাংকের কর্মী বা সার্ভিস প্রোভাইডার সেজে ভুয়া KYC আপডেট লিঙ্ক পাঠায় বা ফোন করে। ভুক্তভোগীদের কাছ থেকে আধার, প্যান, OTP বা ব্যাংক তথ্য নেওয়া হয়। পরে এই তথ্য আর্থিক প্রতারণায় ব্যবহার করা হয়। সর্বদা অফিসিয়াল ব্যাংক শাখা বা বিশ্বস্ত অ্যাপের মাধ্যমেই KYC আপডেট করুন।">
+        Know More
+      </a>
+      </div>
+      
+      <!-- Card 9 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-red">⚠️</div>
+        <h3>WhatsApp Account Hack</h3>
+        <p>Scammers send OTPs, verification links, or ask you to share the 6-digit code. Never share codes or click unknown links.</p>
+        <a href="#" class="know-more" 
+        data-title="WhatsApp Account Hack" 
+        data-img="img/9.png" 
+        data-desc="after clicking know more then ,Fraudsters often call or message pretending to be WhatsApp/support, asking for the verification code or a link. If they get your 6-digit code they can take over your account. Protect yourself: enable two-step verification in WhatsApp settings, don’t share OTPs, ignore unknown links or verification requests, and report suspicious messages." 
+        data-desc2="তারণাকারীরা WhatsApp/সাপোর্ট বলে ফোন করে বা মেসেজ পাঠিয়ে ৬-অঙ্কের কোড চাইতে পারে অথবা সন্দেহজনক লিংক ক্লিক করতে বলবে। কোড পেলে তারা আপনার অ্যাকাউন্ট দখল করতে পারে। রক্ষা পেতে: WhatsApp-এ two-step verification চালু করুন, OTP কাউকে দেখাবেন না, অজানা লিঙ্ক এড়িয়ে চলুন এবং সন্দেহজনক মেসেজ রিপোর্ট করুন।">
+        Know More
+      </a>
+      </div>
+      <!-- Card 10 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-orange">💸</div>
+        <h3>Fake Loan / EMI Offers</h3>
+        <p>Scammers offer instant loans with low interest but demand processing fees or sensitive info first.</p>
+        <a href="#" class="know-more" 
+        data-title="Fake Loan / EMI Offers" 
+        data-img="img/11.png" 
+        data-desc="Scammers lure people with promises of instant loans, low interest, or easy EMIs. Once you apply, they ask for advance “processing fees,” GST, insurance, or even OTPs and personal documents. After getting money or details, they vanish or demand more. Some even send fake approval letters or create websites that look like real banks to appear genuine." 
+        data-desc2="প্রতারকেরা তাত্ক্ষণিক লোন, কম সুদে EMI বা সহজ অনুমোদনের প্রতিশ্রুতি দেয়। আবেদন করার পর তারা প্রসেসিং ফি, GST, বীমা চার্জ, এমনকি OTP বা ব্যক্তিগত নথি পর্যন্ত চায়। টাকা বা তথ্য পেলে তারা উধাও হয়ে যায় বা আরও টাকা দাবি করে। অনেক সময় ভুয়ো অনুমোদনপত্র পাঠায় বা আসল ব্যাংকের মতো ওয়েবসাইট বানায়।">
+        Know More
+      </a>
+      </div>
+      <!-- Card 11 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-blue">💼</div>
+        <h3>Fake Job Offer Scams</h3>
+        <p>Fraudsters promise high-paying jobs and ask for upfront fees, documents, or remote-access to your device</p>
+        <a href="#" class="know-more" 
+        data-title="Fake Job Offer Scams" 
+        data-img="img/12.png" 
+        data-desc="Scammers post fake vacancies or contact you with attractive offers, then request processing fees, ID copies, or remote-desktop access. Always verify the employer via official channels, refuse to pay upfront fees, and don’t share scans of sensitive documents unless you confirm legitimacy." 
+        data-desc2="ভুয়ো চাকরির বিজ্ঞপ্তি বা ফোনে উচ্চ বেতন দেখিয়ে আগ্রহ সৃষ্টি করে তারপর ফি বা ব্যক্তিগত কাগজপত্র চাইতে পারে। কোম্পানির অফিসিয়াল সাইট বা অফিসে যাচাই করুন, আগে টাকা দেবেন না, এবং রিমোট অ্যাক্সেস দিতে যাবেন না।">
+        Know More
+      </a>
+      </div>
+      <!-- Card 12 -->
+      <div class="safe-online-card">
+        <div class="safe-online-icon icon-green">📱</div>
+        <h3>SIM Swap Attacks</h3>
+        <p>Fraudsters trick mobile operators into moving your number to a new SIM—then use OTPs to take over your bank, email, or social accounts.</p>
+        <a href="#" class="know-more" 
+        data-title="SIM Swap Attacks" 
+        data-img="img/10.png" 
+        data-desc="SIM swapping lets attackers hijack your phone number and intercept SMS-based verification codes. Once they control the number they can reset passwords and break into bank, email, or social accounts. Protect yourself by setting a PIN or passphrase with your carrier, enabling app-based two-factor authentication (not SMS), notifying your provider immediately if your phone loses signal unexpectedly, and monitoring accounts for unusual activity. Never share OTPs, personal ID details, or one-time passwords with callers or messages claiming to be support." 
+        data-desc2="SIM swap হলে প্রতারকেরা আপনার মোবাইল নম্বর নিয়ন্ত্রণ করে SMS-ভিত্তিক ভেরিফিকেশন কোড গ্রহন করে। এর মাধ্যমে তারা ব্যাংক, ইমেইল বা সোশ্যাল অ্যাকাউন্টের পাসওয়ার্ড রিসেট করে অ্যাকাউন্ট দখল করতে পারে। রক্ষা পেতে: মোবাইল অপারেটরের কাছে একটি শক্ত PIN বা পাসফ্রেজ সেট করুন, সম্ভব হলে SMS ২-ফ্যাক্টর অ্যাক্টিভ না করে অ্যাপ-ভিত্তিক ২FA ব্যবহার করুন (যেমন Authenticator apps), হঠাৎ ফোন সিগন্যাল হারালে সঙ্গে সঙ্গে অপারেটরকে জানান এবং আপনার অ্যাকাউন্টে অস্বাভাবিক লেনদেন খেয়াল করুন। কাউকে OTP বা ব্যক্তিগত পরিচয় শেয়ার করবেন না।">
+        Know More
+      </a>
+      </div>
+    </div>
+</section>
+
+<!--  -->
+<section class="awareness-gallery">
+  <h2>Kolkata Police Cyber Awareness Drive – Taking Safety to Every Community</h2>
+  <p>Kolkata Police has introduced a Cyber Awareness Program to directly engage with communities and share essential knowledge on online safety. Through interactive sessions, demonstrations, and awareness drives, the initiative delivers key messages on preventing cybercrime and ensuring digital security.</p>
+
+<div class="gallery-grid">
+  <!-- Row 1 -->
+  <img src="img/g-1.jpeg" alt="Program 1" class="gallery-img">
+  <img src="img/g-2.jpeg" alt="Program 2" class="gallery-img">
+  <video controls class="gallery-img big-vertical">
+        <source src="img/video-1.mp4" type="video/mp4"  >
+        Your browser does not support the video tag.
+      </video>
+
+  <!-- Row 2 -->
+  <img src="img/g-3.jpeg" alt="Program 4" class="gallery-img">
+  <img src="img/g-4.jpeg" alt="Program 5" class="gallery-img ">
+</div>
+
+
+
+  <!-- Fullscreen Modal Viewer for Images Only -->
+  <div class="modal" id="imgModal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+</section>
+<div class="police-g-wrapper"><h2>Gallery</h2>
+<div class="police-gallery-section">  
+<div class="police-gallery">
+
+  <!-- Top row -->
+  <div class="top-row">
+    <a href="#img1"><img src="img/Copy of Dark Grey and Brown Barber Shop Pamphlet Tri-fold Brochure (4)_page-0001.jpg" alt="Event 1"></a>
+    <a href="#img2"><img src="img/Copy of Dark Grey and Brown Barber Shop Pamphlet Tri-fold Brochure (4)_page-0002.jpg" alt="Event 2"></a>
+  </div>
+
+  <!-- Bottom row -->
+  <div class="bottom-row">
+    <a href="#img3"><img src="img/placeholder-image.jpg" alt="Event 3"></a>
+    <a href="#img4"><img src="img/placeholder-image.jpg" alt="Event 4"></a>
+    <a href="#img5"><img src="img/placeholder-image.jpg" alt="Event 5"></a>
+  </div>
+</div>
+</div>
+<!-- ======= Lightbox overlays ======= -->
+<a href="#" class="lb-overlay" id="img1"><img src="img/Copy of Dark Grey and Brown Barber Shop Pamphlet Tri-fold Brochure (4)_page-0001.jpg"><div class="lb-caption">Event 1</div></a>
+<a href="#" class="lb-overlay" id="img2"><img src="img/Copy of Dark Grey and Brown Barber Shop Pamphlet Tri-fold Brochure (4)_page-0002.jpg"><div class="lb-caption">Event 2</div></a>
+<a href="#" class="lb-overlay" id="img3"><img src="img/placeholder-image.jpg"><div class="lb-caption">Event 3</div></a>
+<a href="#" class="lb-overlay" id="img4"><img src="img/placeholder-image.jpg"><div class="lb-caption">Event 4</div></a>
+<a href="#" class="lb-overlay" id="img5"><img src="img/placeholder-image.jpg"><div class="lb-caption">Event 5</div></a>
+
+</div>
+
+
+
+<section class="gallery-slider">
+  <h2 class="slider-title">Cyber Comics</h2>
+  <div class="slider-wrapper">
+    <button class="slider-btn prev">&#10094;</button>
+    <div class="slider-track">
+      <div class="slide"><img src="img/slider-one.jpg" alt="Program 1"></div>
+      <div class="slide"><img src="img/slider-two.jpg" alt="Program 2"></div>
+      <div class="slide"><img src="img/slider-three.jpg" alt="Program 3"></div>
+      <div class="slide"><img src="img/slider-fore.jpg" alt="Program 4"></div>
+      <div class="slide"><img src="img/slider-five.jpg" alt="Program 5"></div>
+      <div class="slide"><img src="img/WhatsApp Image 2025-09-19 at 2.38.20 PM (1).jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/WhatsApp Image 2025-09-19 at 2.38.20 PM.jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/WhatsApp Image 2025-09-19 at 2.38.21 PM (1).jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/WhatsApp Image 2025-09-19 at 2.38.21 PM.jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/WhatsApp Image 2025-09-19 at 2.38.22 PM (1).jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/WhatsApp Image 2025-09-19 at 2.38.22 PM.jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/WhatsApp Image 2025-09-19 at 2.38.23 PM (1).jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/Comics-1.jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/Comics-2.jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/Comics-3.jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/Comics-4.jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/Comics-5.jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/Comics-6.jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/Comics-7.jpeg" alt="Program 5"></div>
+      <div class="slide"><img src="img/Comics-8.jpeg" alt="Program 5"></div>
+    </div>
+   <button class="slider-btn next">&#10095;</button>
+  </div>
+</section>
+<section class="cyber-contact-section">
+<div class="cyber-contact-section-top-sub">
+  <div class="cyber-contact-header">
+    <div class="cyber-contact-icon">
+      <!-- you can swap this SVG for any icon library -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92V19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-2.08
+                 a2 2 0 0 1 .89-1.68l7-4.38a2 2 0 0 1 2.22 0l7 4.38
+                 a2 2 0 0 1 .89 1.68z"></path>
+        <path d="M6.5 9.5a5.5 5.5 0 0 1 11 0"></path>
+      </svg>
+    </div>
+    <div class="cyber-contact-text">
+      <h2>Divisional Cyber Cell Contact Details</h2>
+      <p>Reach out to your nearest division for immediate assistance.</p>
+    </div>
+  </div>
+</div>
+
+
+  <div class="table-responsive">
+    <table class="cyber-table" border="1" cellspacing="0" cellpadding="8" style="width:100%; border-collapse: collapse;">
+      <thead>
+        <tr style="background-color:#0a2a55; color: white;">
+          <th>Cyber Cell Division</th>
+          <th>Contact Details</th>
+          <th>Police Stations Covered</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cyber Cell North & North Suburban Division</strong></td>
+          <td>
+            📞 (033) 2967 3054  /  📱 70448 48602<br>
+            ✉️ <a href="mailto:cybercell-nd@kolkatapolice.gov.in">cybercell-nd@kolkatapolice.gov.in</a>
+          </td>
+          <td>
+            Shyampukur PS, Jurabagan PS, Burtolla PS, Amherst Street PS, Cossipore PS, Tala PS, Sinthee PS, Chitpore PS
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Cyber Cell Central Division</strong></td>
+          <td>
+            📞 (033) 2953 0101 / 📱 70438 29607
+           <br>
+            ✉️ <a href="mailto:cdcybercell@kolkatapolice.gov.in">cdcybercell@kolkatapolice.gov.in</a>
+          </td>
+          <td>
+            Burrabazar PS, Posta PS, Jurasanko PS, Girish Park PS, Hare street PS, Bowbazar PS, Muchipara PS, Taltala PS, New Market PS
+          </td>
+        </tr>
+          <tr>
+          <td><strong>Cyber Cell Somtral Division</strong></td>
+          <td>
+            📞 (033) 2953 1054 / 📱 30452 84093<br>
+            
+            ✉️ <a href="mailto:cybercell-sd@kolkatapolice.gov.in">cybercell-sd@kolkatapolice.gov.in</a>
+          </td>
+          <td>
+            Tollygunge PS, Shakespeare Sarani PS, Charu market PS, Park Street PS, Hew Alipore PS, Maidan PS, Bhowanipore PS, Kalighat PS, Hestings PS, Chetla PS, Alipore PS
+          </td>
+        </tr>
+          <tr>
+          <td><strong>Cyber Cell East Suburban Division</strong></td>
+          <td>
+            📞 (033) 2956 3051  / 📱 70448 75470<br>
+           
+            ✉️ <a href="mailto:cybercell-esd@kolkatapolice.gov.in">cybercell-esd@kolkatapolice.gov.in</a>
+          </td>
+          <td>
+            Entally PS, Maniktala PS, Ultadanga PS, Belfaghata PS, Phoolbagan PS, Tangra PS, Narkeldanga PS
+          </td>
+        </tr>
+          <tr>
+          <td><strong>Cyber Cell South East Division</strong></td>
+          <td>
+            📞 (033) 2959 0294  / 📱 70348 75883<br>
+          
+            ✉️ <a href="mailto:sedcybercell@kolkatapolice.gov.in">sedcybercell@kolkatapolice.gov.in</a>
+          </td>
+          <td>
+            Topsia PS, Benispukur PS, Ballyguige PS, Rabindra Sarobar PS, Lake PS, Karaya PS, Tilljala PS, Garishat PS
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Cyber Cell Port Division</strong></td>
+          <td>
+            📞 (033) 2967 3073 / 📱 97488 57819<br>
+           
+            ✉️ <a href="mailto:cybercellad@kolkatapolice.gov.in">cybercellad@kolkatapolice.gov.in</a>
+          </td>
+          <td>
+            North Port PS, South Port PS, Watgunge PS, Garden Reach PS, Ehalbpur PS, West Port PS, Nadial PS, Rajahagan PS, Metiaburuz PS
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Cyber Cell South Suburban Division</strong></td>
+          <td>
+            📞 (033) 2959 0298 / 📱 92838 50932<br>
+          
+            ✉️ <a href="mailto:sedcybercell1@kolkatapolice.gov.in">sedcybercell1@kolkatapolice.gov.in</a>
+          </td>
+          <td>
+            Golf Green PS, Netaji Nagar PS, Jadevpur PS, Regent Park PS, Banadront PS, Garfa PS, Kasba PS, Patuli PS
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Cyber Cell South West Division</strong></td>
+          <td>
+            📞 (033) 2956 0055 / 📱 70448 75471<br>
+           
+            ✉️ <a href="mailto:cybercell-swd@kolkatapolice.gov.in">cybercell-swd@kolkatapolice.gov.in</a>
+          </td>
+          <td>
+            Sarsuna PS, Taratala PS, Parnathree PS, Thakurpukur PS, Behala PS, Hasldevpur PS
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Cyber Cell East Division</strong></td>
+          <td>
+            📞 (033) 2956 0055 / 📱 70838 75876<br>
+        
+            ✉️ <a href="mailto:cybercell-sd@kolkatapolice.gov.in">cybercell-sd@kolkatapolice.gov.in</a>
+          </td>
+          <td>
+            Panchasayar PS, Purba Jadavpur PS, Pragati Maidan PS, Survey Park PS, Anandapur PS
+          </td>
+        </tr>
+      <tr>
+          <td><strong>Cyber Cell Bhangar Division</strong></td>
+          <td>
+            📞 6289655390<br>
+            ✉️ <a href="mailto:cybercell-bhangar@kolkatapolice.gov.in">cybercell-bhangar@kolkatapolice.gov.in</a>
+          </td>
+          <td>
+            Bhangar PS, Bodra PS, Chandaneswar PS, Madhabpur PS, Utter Kashipur PS, Bijoyganj Bazar PS, Polerhat PS, Hatishala PS
+          </td>
+        </tr>
+
+    
+      </tbody>
+    </table>
+  </div>
+</section>
+<!-- Modal for full image -->
+<div class="slidermodal" id="slidermodal">
+  <span class="sliderclose">&times;</span>
+  <img class="slidermodal-content" id="slidermodal-img">
+</div>
+
+ <section class="thankyou-section">
+    <h2>A Heartfelt Thank You</h2>
+    <p class="subtitle">We sincerely thank ICICI Bank, State Bank of India, and Federal Bank for their continued trust and collaboration in our journey.</p>
+
+    <div class="partners">
+      <div class="partner-card">
+        <div class="partner-card-inner">
+          <img src="img/sebi.png" alt="SEBI" >
+          <h3>SEBI</h3>
+          <p>India's market regulator ensuring transparency in securities trading</p>
+        </div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-card-inner">
+          <img src="img/ICICI_Bank_Logo.svg.png" alt="ICICI Bank" class="icci">
+                 <h3>ICICI Bank</h3>
+                   <p>Leading private sector bank driving digital innovation</p>
+        </div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-card-inner">
+          <img src="img/Federal_Bank_1.png" alt="Federal Bank Logo" class="federal">
+          <h3>Federal Bank</h3>
+          <p>Progressive banking solutions for modern India</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="thankyou-footer">
+      <a href="#" class="footer-btn">🤝 Trusted Partnership </a>
+    </div>
+  </section>
+
+<section class="social-connect">
+  <h2>Stay Connected & Updated</h2>
+  <p>Follow us for the latest cyber safety updates and alerts</p>
+
+ <div class="social-grid">
+  <!-- Facebook -->
+  <div class="social-card">
+     <div class="social-icon">
+    <svg width="44" height="44" fill="#1877F2" viewBox="0 0 24 24">
+        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+      </svg>
+      </div>
+    <h3>Facebook</h3>
+    <p>Daily updates and tips</p>
+    <a href="https://www.facebook.com/people/Cyber-Safe-Kolkata/61558476539013/" target="_blank"  class="social-btn facebook">Follow</a>
+    <div class="">
+    <img src="img/qr-facebook.png" alt="Facebook QR" class="qr-small">
+    </div>
+  </div>
+
+  <!-- Instagram -->
+  <div class="social-card">
+    <div class="social-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.6"></rect>
+    <path d="M12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"></circle>
+  </svg></div>
+    <h3>Instagram</h3>
+    <p>Visual safety guides</p>
+    <a href="https://www.instagram.com/cybersafekolkata/" target="_blank"  class="social-btn instagram">Follow</a>
+    <div class="">
+    <img src="img/instagram.png" alt="Instagram QR" class="qr-small">
+    </div>
+  </div>
+
+  <!-- WhatsApp -->
+  <div class="social-card">
+    <div class="social-icon"><a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" class="wa-circle" aria-label="WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#fff" d="M20.52 3.48A11.88 11.88 0 0012 0C5.373 0 .092 5.28.01 11.8 0 14.27.8 16.5 2.36 18.09L0 24l5.98-2.29A11.9 11.9 0 0012 24c6.627 0 12-5.373 12-12 0-1.98-.5-3.84-1.48-5.52zM12 21.6c-1.7 0-3.35-.44-4.8-1.27l-.34-.2-3.56 1.36 1.01-3.3-.22-.36A8.4 8.4 0 013.6 12c0-4.64 3.76-8.4 8.4-8.4 4.64 0 8.4 3.76 8.4 8.4 0 4.64-3.76 8.4-8.4 8.4z"/>
+    <path fill="#fff" d="M17.1 14.2c-.3-.15-1.76-.86-2.03-.96-.27-.1-.46-.15-.65.15-.2.3-.8.96-.98 1.15-.18.18-.35.2-.65.06-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.12-.61.12-.12.27-.32.4-.48.13-.16.17-.27.27-.45.1-.18.05-.34-.02-.48-.07-.13-.65-1.56-.9-2.14-.24-.56-.48-.48-.66-.49-.17-.01-.36-.01-.55-.01s-.48.07-.73.34c-.25.27-.95.93-.95 2.28 0 1.34.97 2.64 1.1 2.83.12.18 1.9 2.9 4.6 3.96 2.7 1.06 2.7.71 3.18.67.48-.04 1.56-.63 1.78-1.24.22-.6.22-1.12.15-1.24-.07-.12-.27-.18-.57-.33"/>
+  </svg>
+</a></div>
+    <h3>WhatsApp</h3>
+    <p>Quick alerts and support</p>
+    <a href="https://whatsapp.com/channel/0029VaZfjjm0LKZKe9nTwB1X" target="_blank"  class="social-btn whatsapp">Join</a>
+    <div class="">
+    <img src="img/wp-qr.png" alt="WhatsApp QR" class="qr-small">
+    </div>
+  </div>
+
+  <!-- Twitter/X -->
+  <div class="social-card">
+    <div class="social-icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1200 1227"
+  width="40"
+  height="40"
+  fill="currentColor"
+>
+  <path d="M714.2 0h281.7L747 511.3l520.7 715.7H986.3L656.6 756l-293 471H81.9l327.8-526.8L0 0h300.7l234.6 347.1L714.2 0z"/>
+</svg></div>
+    <h3>Twitter/X</h3>
+    <p>Real-time notifications</p>
+    <a href="https://x.com/dccyberkp?lang=en" target="_blank"  class="social-btn twitter">Follow</a>
+    <div class="">
+    <img src="img/x-qr.png" alt="Twitter QR" class="qr-small">
+    </div>
+  </div>
+
+
+</div>
+
+
+  <!-- Address -->
+  
+</section>
+<div class="address">
+    <strong>Address:</strong> 18, Lal Bazar St, Radha Bazar, Lal Bazar, Kolkata, West Bengal 700001
+</div>
+
+
+
+  <!-- popup -->
+<div id="popupModal" class="modal">
+  <div class="modal-content">
+    <span class="close-popup"></span>
+    <img id="modalImg" src="" alt="">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <p id="modalDesc2"></p>
+  </div>
+</div>
+
+<!-- js -->
+ <script>
+  // Modal popup logic
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImage");
+  const images = document.querySelectorAll(".gallery-img");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Optional: Close modal when clicking outside the image
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+<script>
+  const popupModal = document.getElementById("popupModal");
+  const popupModalImg = document.getElementById("modalImg");
+  const popupModalTitle = document.getElementById("modalTitle");
+  const popupModalDesc = document.getElementById("modalDesc");
+  const popupModalDesc2 = document.getElementById("modalDesc2");
+  const popupCloseBtn = document.querySelector(".close-popup");
+
+  document.querySelectorAll(".know-more").forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      popupModal.style.display = "block";
+      popupModalImg.src = link.getAttribute("data-img");
+      popupModalTitle.textContent = link.getAttribute("data-title");
+      popupModalDesc.textContent = link.getAttribute("data-desc");
+      popupModalDesc2.textContent = link.getAttribute("data-desc2") || ""; // optional second paragraph
+    });
+  });
+
+  popupCloseBtn.onclick = () => popupModal.style.display = "none";
+  window.onclick = (e) => { if (e.target == popupModal) popupModal.style.display = "none"; }
+</script>
+<script>
+const track = document.querySelector(".slider-track");
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+// Modal elements
+const modalslider = document.getElementById("slidermodal");
+const modalImgslider = document.getElementById("slidermodal-img");
+const modalClose = document.querySelector(".sliderclose");
+
+let index = 0;
+let slidesPerView = getSlidesPerView();
+
+function getSlidesPerView() {
+  if (window.innerWidth <= 600) return 1;
+  if (window.innerWidth <= 900) return 2;
+  return 3;
+}
+
+function updateSlider() {
+  slidesPerView = getSlidesPerView();
+  const slideWidth = slides[0].offsetWidth;
+  track.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+
+ nextBtn.addEventListener("click", () => {
+    if (index < slides.length - slidesPerView) {
+      index++;
+      console.log("Next clicked, index now:", index);
+      updateSlider();
+    } else {
+      console.log("Next clicked, but at max index.");
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      console.log("Prev clicked, index now:", index);
+      updateSlider();
+    } else {
+      console.log("Prev clicked, but at index 0.");
+    }
+  });
+
+window.addEventListener("resize", updateSlider);
+updateSlider();
+
+// Open modal on image click
+slides.forEach(slide => {
+  slide.querySelector("img").addEventListener("click", (e) => {
+    modal.style.display = "flex";
+    modalImg.src = e.target.src;
+  });
+});
+
+// Close modal
+modalClose.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// Close modal on outside click
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+</script>
+<script>
+  const promoSlides = document.querySelector('.main-promo-banner-slides');
+const promoSlideCount = document.querySelectorAll('.main-promo-banner-slide').length;
+let promoIndex = 0;
+
+function showPromoSlide(i) {
+  promoIndex = (i + promoSlideCount) % promoSlideCount;
+  promoSlides.style.transform = `translateX(-${promoIndex * 100}%)`;
+}
+
+document
+  .querySelector('.main-promo-banner-next')
+  .addEventListener('click', () => showPromoSlide(promoIndex + 1));
+
+document
+  .querySelector('.main-promo-banner-prev')
+  .addEventListener('click', () => showPromoSlide(promoIndex - 1));
+
+// Optional autoplay every 5 seconds
+setInterval(() => showPromoSlide(promoIndex + 1), 5000);
+</script>
+<script>
+  (function () {
+    const slider = document.querySelector('.cyber-tips-slider');
+    const slidesCyber = document.querySelectorAll('.cyber-tips-slide');
+    const nextBtnCyber = document.querySelector('.cyber-tips-next');
+    const prevBtnCyber = document.querySelector('.cyber-tips-prev');
+
+    if (!slider || slidesCyber.length === 0) return;
+
+    let currentIndex = 0;
+
+    function getVisibleCount() {
+      return window.innerWidth >= 768 ? 4 : 1;
+    }
+
+    function updateSlider() {
+      const visibleCount = getVisibleCount();
+      const slideWidth = 100 / visibleCount;
+      slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+    }
+
+    nextBtnCyber?.addEventListener('click', () => {
+      const visibleCount = getVisibleCount();
+      const maxIndex = slidesCyber.length - visibleCount;
+      currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+      updateSlider();
+    });
+
+    prevBtnCyber?.addEventListener('click', () => {
+      const visibleCount = getVisibleCount();
+      const maxIndex = slidesCyber.length - visibleCount;
+      currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+      updateSlider();
+    });
+
+    window.addEventListener('resize', updateSlider);
+    updateSlider();
+  })();
+</script>
+
+
+
+</body>
+</html>
